@@ -3047,3 +3047,7 @@
   overflow: visible;
   clip: auto;
 }
+
+body {
+  background-color: #000000;
+}
