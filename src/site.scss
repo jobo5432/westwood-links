@@ -5,8 +5,42 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 //bootstrap
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+//mixins
+@import "mixins";
+
 //main color palette
 @import "./palette";
 
+//custom font(s)
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle');
+
 //site styles
+@import "./components/common/Navbar.component";
 @import "./components/home/Homepage.component";
+
+body, html{
+  margin: 0;
+  padding: 0px;
+  background-color: $main-bg;
+}
+
+.container-fluid {
+  padding: 0px !important;
+  margin:  0;
+
+  .row {
+    margin-left:  0;
+    margin-right: 0;
+  }
+}
+
+.banner {
+  background:      url(../static/bg-1920.jpg) repeat center center;
+  background-size: cover;
+
+  border-radius:   0 !important;
+  margin:          0 !important;
+  border-bottom:   solid 1px $divider-color;
+  height: 525px;
+}
+

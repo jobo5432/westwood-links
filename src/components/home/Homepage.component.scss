@@ -1,0 +1,31 @@
+.banner{
+  color: $banner-text;
+  position: relative;
+
+  h1, h2{
+    border: none;
+    display: inline-block;
+    margin: 0;
+    text-shadow: 2px 2px 2px $text-shadow-color;
+  }
+
+  h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 10rem;
+  }
+
+  h2{
+    font-family: 'News Cycle', sans-serif;
+    margin-left: 22rem;
+    font-size: 4rem;
+    margin-top: -4rem;
+  }
+
+  .branding{
+    border: none;
+    margin-right: 18px;
+    display: inline-block;
+    float: right;
+    margin-top: 295px;
+  }
+}

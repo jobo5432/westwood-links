@@ -1,16 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {Link} from 'react-router';
+import Navbar from '../common/Navbar.component';
 
-class HomePage extends React.Component{
-    render() {
-        return(
-            <div className="jumbotron">
-                <h1>React.js</h1>
-                <h2>... using Redux, SASS, and Webpack.</h2>
-                <Link to="about" className="btn btn-primary btn-lg">Learn more</Link>
+class HomePage extends React.Component {
+  render() {
+    return (
+      <div>
+        <div className="jumbotron banner">
+          <div className="container">
+            <div className="branding">
+              <div className="row"><h1>Westwood</h1></div>
+              <div className="row"><h2>Golf Club</h2></div>
             </div>
-        );
-    }
+          </div>
+        </div>
+        <div className="container">
+          <Navbar/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default HomePage;

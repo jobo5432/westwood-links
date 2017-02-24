@@ -6,6 +6,7 @@
 /* FONT PATH
  * -------------------------- */
 @import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle");
 @font-face {
   font-family: 'FontAwesome';
   src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -3046,4 +3047,112 @@
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+.main-nav {
+  margin-top: -32px;
+}
+
+.main-nav .navbar .navbar-nav-justified {
+  padding-left: 0;
+  padding-right: 0;
+  border: solid 1px #a1a1a1;
+}
+
+.main-nav .navbar .navbar-nav-justified .nav-pills li {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  background-image: linear-gradient(#fcfcfc, #afafaf);
+  border-right: solid 1px #bababa;
+}
+
+.main-nav .navbar .navbar-nav-justified .nav-pills li a {
+  color: #212121;
+}
+
+.main-nav .navbar .navbar-nav-justified .nav-pills li a.active-link {
+  background-image: linear-gradient(#afafaf, #fcfcfc);
+}
+
+.main-nav .navbar .navbar-nav-justified li:last-child {
+  border-right: none;
+}
+
+.main-nav .navbar .navbar-collapse > .nav-justified.nav-pills > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  border-radius: 0px !important;
+}
+
+.main-nav .navbar .navbar-collapse > .nav-justified.nav-pills > li + li {
+  margin-left: 0;
+  border-top: solid 1px #e7e7e7;
+}
+
+.main-nav .navbar-toggle-center {
+  width: 100%;
+  float: none;
+  margin: 0 auto;
+  border-width: 0;
+  border-radius: 0 !important;
+  padding: 14px 15px;
+  font-size: 16px;
+}
+
+.banner {
+  color: #ffffff;
+  position: relative;
+}
+
+.banner h1, .banner h2 {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  text-shadow: 2px 2px 2px rgba(88, 88, 88, 0.75);
+}
+
+.banner h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 10rem;
+}
+
+.banner h2 {
+  font-family: 'News Cycle', sans-serif;
+  margin-left: 22rem;
+  font-size: 4rem;
+  margin-top: -4rem;
+}
+
+.banner .branding {
+  border: none;
+  margin-right: 18px;
+  display: inline-block;
+  float: right;
+  margin-top: 295px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0px;
+  background-color: #212121;
+}
+
+.container-fluid {
+  padding: 0px !important;
+  margin: 0;
+}
+
+.container-fluid .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.banner {
+  background: url(../static/bg-1920.jpg) repeat center center;
+  background-size: cover;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  border-bottom: solid 1px #000000;
+  height: 525px;
 }
