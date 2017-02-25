@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-export default function TeeTimeCallout(props){
+const TeeTimeCallout = (props) => {
   return(
     <div className="center-text light-text callout">
       <h3>Book a Tee Time</h3>
@@ -26,8 +26,10 @@ export default function TeeTimeCallout(props){
       </div>
     </div>
     );
-}
+};
 
 TeeTimeCallout.propTypes = {
   submitAction: PropTypes.func.isRequired
-}
+};
+
+export default TeeTimeCallout;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Footer(props) {
+const Footer = (props) => {
   let year = '2017';
   return (
     <div className="site-footer">
@@ -18,4 +18,6 @@ export default function Footer(props) {
 
     </div>
   );
-}
+};
+
+export default Footer;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ContactBanner(props){
+const ContactBanner = (props) =>{
   return(
     <div className="contact-banner">
       <div className="container">
@@ -26,4 +26,6 @@ export default function ContactBanner(props){
       </div>
     </div>
   );
-}
+};
+
+export default ContactBanner;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link, IndexLink } from 'react-router';
 
-const Header = () => {
+const Header = (props) => {
     return(
         <nav>
             <IndexLink to="/" activeClassName="active">Home</IndexLink>

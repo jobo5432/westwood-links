@@ -13,6 +13,10 @@ class HomePage extends React.Component {
     this.viewTeeTimes = this.viewTeeTimes.bind(this);
   }
 
+  componentWillMount(){
+    document.title = `${Constants.PAGE_TITLE_PREFIX} Home`;
+  }
+
   joinMailingList(e) {
     e.preventDefault();
     alert('join mailing list not implemented yet...');
@@ -47,10 +51,6 @@ class HomePage extends React.Component {
         </div>
       </div>
     );
-  }
-
-  componentWillMount(){
-    document.title = `${Constants.PAGE_TITLE_PREFIX} Home`;
   }
 }
 

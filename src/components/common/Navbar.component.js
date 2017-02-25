@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Link, IndexLink} from 'react-router';
 
-export default function Navbar(props) {
+const Navbar = (props) => {
   //do not style the home button on the nav if the page displayed is the index page for the site.
   let homeActiveClassName = props.homePage ? '' : 'active-link';
 
@@ -30,8 +30,10 @@ export default function Navbar(props) {
       </nav>
     </div>
   );
-}
+};
 
 Navbar.propTypes = {
   homePage: PropTypes.bool
 };
+
+export default Navbar;

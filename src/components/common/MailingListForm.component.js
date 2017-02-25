@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-export default function MailingListForm(props) {
+const MailingListForm = (props) => {
   return (
     <div className="center-text light-text callout">
       <h3>Join Our Mailing List</h3>
@@ -29,8 +29,10 @@ export default function MailingListForm(props) {
       </div>
     </div>
   );
-}
+};
 
 MailingListForm.propTypes = {
   submitAction: PropTypes.func.isRequired
 };
+
+export default MailingListForm;
