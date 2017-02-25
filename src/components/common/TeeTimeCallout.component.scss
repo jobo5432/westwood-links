@@ -1,0 +1,6 @@
+@import '../../mixins';
+@import '../../palette';
+
+#TeeTimeFormContainer{
+  border-left: solid 1px darken($light-separator, 10%);
+}

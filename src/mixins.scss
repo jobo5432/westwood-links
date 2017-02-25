@@ -5,3 +5,42 @@
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
+
+@mixin border-opacity($color, $opacity) {
+  $opacity: $opacity / 100;
+
+  // Unsupporting browsers get this
+  border-color: $color;
+
+  // Browsers that support RGBA will get this instead
+  border-color: rgba($color, $opacity);
+
+  // Prevent the element's background from reaching the edge of the border
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}

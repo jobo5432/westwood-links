@@ -1,0 +1,9 @@
+.site-footer{
+  margin-top: 98px;
+  margin-bottom: 14px;
+  color: transparentize($footer-text-color, 0.45);
+
+  a{
+    color: transparentize($footer-text-color, 0.25);
+  }
+}

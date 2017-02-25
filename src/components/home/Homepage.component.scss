@@ -1,23 +1,30 @@
 .banner{
-  color: $banner-text;
+  color: $banner-text !important;
   position: relative;
+
+  background:      url(../static/bg-1920-short.jpg) repeat center center;
+  background-size: cover;
+
+  border-radius:   0 !important;
+  margin:          0 !important;
+  border-bottom:   solid 1px $main-text;
+  height: 400px;
 
   h1, h2{
     border: none;
     display: inline-block;
     margin: 0;
-    text-shadow: 2px 2px 2px $text-shadow-color;
   }
 
   h1{
     font-family: 'Great Vibes', cursive;
-    font-size: 10rem;
+    font-size: 10rem !important;
   }
 
   h2{
     font-family: 'News Cycle', sans-serif;
     margin-left: 22rem;
-    font-size: 4rem;
+    font-size: 4rem !important;
     margin-top: -4rem;
   }
 
@@ -26,6 +33,6 @@
     margin-right: 18px;
     display: inline-block;
     float: right;
-    margin-top: 295px;
+    margin-top: 164px;
   }
 }

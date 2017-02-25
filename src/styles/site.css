@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle");
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -6,7 +7,6 @@
 /* FONT PATH
  * -------------------------- */
 @import url(../../node_modules/bootstrap/dist/css/bootstrap.min.css);
-@import url("https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle");
 @font-face {
   font-family: 'FontAwesome';
   src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -3050,7 +3050,7 @@
 }
 
 .main-nav {
-  margin-top: -32px;
+  margin-top: -50px;
 }
 
 .main-nav .navbar .navbar-nav-justified {
@@ -3079,8 +3079,8 @@
 }
 
 .main-nav .navbar .navbar-collapse > .nav-justified.nav-pills > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   margin-bottom: 0;
   border-radius: 0px !important;
 }
@@ -3100,27 +3100,36 @@
   font-size: 16px;
 }
 
+#TeeTimeFormContainer {
+  border-left: solid 1px #4d4d4d;
+}
+
 .banner {
-  color: #ffffff;
+  color: #ffffff !important;
   position: relative;
+  background: url(../static/bg-1920-short.jpg) repeat center center;
+  background-size: cover;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  border-bottom: solid 1px #f0f0f0;
+  height: 400px;
 }
 
 .banner h1, .banner h2 {
   border: none;
   display: inline-block;
   margin: 0;
-  text-shadow: 2px 2px 2px rgba(88, 88, 88, 0.75);
 }
 
 .banner h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 10rem;
+  font-size: 10rem !important;
 }
 
 .banner h2 {
   font-family: 'News Cycle', sans-serif;
   margin-left: 22rem;
-  font-size: 4rem;
+  font-size: 4rem !important;
   margin-top: -4rem;
 }
 
@@ -3129,13 +3138,49 @@
   margin-right: 18px;
   display: inline-block;
   float: right;
-  margin-top: 295px;
+  margin-top: 164px;
+}
+
+.site-footer {
+  margin-top: 98px;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-banner {
+  font-size: 1.65rem;
+  z-index: 2147483647;
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  right: 0px;
+  height: auto;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.contact-banner .icon {
+  margin-right: 18px;
+  font-size: 2.4rem;
 }
 
 body, html {
   margin: 0;
   padding: 0px;
-  background-color: #212121;
+  background-color: #212121 !important;
+  background-image: url(../static/argyle.png);
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 2px rgba(88, 88, 88, 0.75);
+}
+
+.light-shadow-text {
+  text-shadow: 1px 1px 1px rgba(88, 88, 88, 0.75);
 }
 
 .container-fluid {
@@ -3148,11 +3193,72 @@ body, html {
   margin-right: 0;
 }
 
-.banner {
-  background: url(../static/bg-1920.jpg) repeat center center;
-  background-size: cover;
-  border-radius: 0 !important;
-  margin: 0 !important;
-  border-bottom: solid 1px #000000;
-  height: 525px;
+.center-text {
+  text-align: center;
+}
+
+.light-text {
+  color: #f0f0f0;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.callout {
+  font-size: 1.65rem;
+}
+
+.callout h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.4rem;
+}
+
+.callout h4 {
+  font-size: 2.5rem;
+}
+
+.callout .callout-form {
+  margin-top: 24px;
+}
+
+.callout .btn, .callout input[type=text] {
+  font-size: 2rem;
+}
+
+.callout input[type=text]::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.callout input[type=text]:-moz-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.callout input[type=text]::-moz-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.callout input[type=text]:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.btn-gold {
+  color: #f0f0f0;
+  background-image: linear-gradient(#ddc061, #d4af37) !important;
+}
+
+.button-push {
+  margin-top: 76px;
 }

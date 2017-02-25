@@ -1,11 +1,10 @@
 .main-nav {
-  margin-top: -32px;
+  margin-top: -50px;
 
   .navbar .navbar-nav-justified {
     padding-left:  0;
     padding-right: 0;
     border: solid 1px lighten($main-bg, 50%);
-
 
     .nav-pills{
       li{
@@ -30,8 +29,8 @@
   }
 
   .navbar .navbar-collapse > .nav-justified.nav-pills > li > a {
-    padding-top:           15px;
-    padding-bottom:        15px;
+    padding-top:           7px;
+    padding-bottom:        7px;
     margin-bottom:         0;
     border-radius:         0px !important;
   }

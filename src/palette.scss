@@ -1,9 +1,17 @@
 $main-bg: #212121;
 $divider-color: #000000;
 $banner-text: #ffffff;
+$main-text: #f0f0f0;
 $text-shadow-color: rgba(88, 88, 88, .75);
 
 $nav-text-color: $main-bg;
 
 $nav-gradient-start: #fcfcfc;
 $nav-gradient-end: #afafaf;
+
+$gold-gradient-end: #d4af37;
+$gold-gradient-start: lighten($gold-gradient-end, 10%);
+
+$light-separator: #666;
+
+$footer-text-color: #fff;

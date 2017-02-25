@@ -1,9 +1,5 @@
-//font awesome
-$fa-font-path: "../../node_modules/font-awesome/fonts";
-@import "../node_modules/font-awesome/scss/font-awesome";
-
-//bootstrap
-@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+//variables
+@import "variables";
 
 //mixins
 @import "mixins";
@@ -14,14 +10,34 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 //custom font(s)
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle');
 
+//font awesome
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+
+//bootstrap
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 //site styles
 @import "./components/common/Navbar.component";
+@import "./components/common/MailingListForm.component";
+@import "./components/common/TeeTimeCallout.component";
 @import "./components/home/Homepage.component";
+@import "./components/common/Footer.component";
+@import "./components/common/ContactBanner.component";
 
-body, html{
-  margin: 0;
-  padding: 0px;
-  background-color: $main-bg;
+body, html {
+  margin:           0;
+  padding:          0px;
+  background-color: $main-bg !important;
+  background-image: url(../static/argyle.png);
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 2px $text-shadow-color;
+}
+
+.light-shadow-text {
+  text-shadow: 1px 1px 1px $text-shadow-color;
 }
 
 .container-fluid {
@@ -34,13 +50,53 @@ body, html{
   }
 }
 
-.banner {
-  background:      url(../static/bg-1920.jpg) repeat center center;
-  background-size: cover;
-
-  border-radius:   0 !important;
-  margin:          0 !important;
-  border-bottom:   solid 1px $divider-color;
-  height: 525px;
+.center-text {
+  text-align: center;
 }
 
+.light-text {
+  color: $main-text;
+}
+
+.text-align-right{
+  text-align: right;
+}
+
+.callout {
+  font-size: 1.65rem;
+
+  h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size:   4.4rem;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
+  .callout-form {
+    margin-top: 24px;
+  }
+
+  .btn, input[type=text] {
+    font-size: 2rem;
+  }
+
+  input[type=text] {
+    @include placeholder {
+      font-style:  italic;
+      font-size:   1.75rem;
+      font-weight: 100;
+      color:       lighten($main-bg, 25%);
+    }
+  }
+}
+
+.btn-gold {
+  color:            $main-text;
+  background-image: linear-gradient($gold-gradient-start, $gold-gradient-end) !important;
+}
+
+.button-push {
+  margin-top: 76px;
+}
