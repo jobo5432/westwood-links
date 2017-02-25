@@ -1,7 +1,10 @@
 .site-footer{
+  padding-top: 6px;
   margin-top: 98px;
   margin-bottom: 14px;
   color: transparentize($footer-text-color, 0.45);
+
+  border-top: double 1px transparentize($footer-text-color, 0.5);
 
   a{
     color: transparentize($footer-text-color, 0.25);

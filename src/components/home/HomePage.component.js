@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import Navbar from '../common/Navbar.component';
 import MailingListForm from '../common/MailingListForm.component';
 import TeeTimeCallout from '../common/TeeTimeCallout.component';
+import * as Constants from '../../constants';
 
 class HomePage extends React.Component {
   constructor(props, context) {
@@ -46,6 +47,10 @@ class HomePage extends React.Component {
         </div>
       </div>
     );
+  }
+
+  componentWillMount(){
+    document.title = `${Constants.PAGE_TITLE_PREFIX} Home`;
   }
 }
 

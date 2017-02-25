@@ -3050,7 +3050,7 @@
 }
 
 .main-nav {
-  margin-top: -50px;
+  margin-top: -28px;
 }
 
 .main-nav .navbar .navbar-nav-justified {
@@ -3061,7 +3061,7 @@
 
 .main-nav .navbar .navbar-nav-justified .nav-pills li {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   background-image: linear-gradient(#fcfcfc, #afafaf);
   border-right: solid 1px #bababa;
 }
@@ -3098,6 +3098,10 @@
   border-radius: 0 !important;
   padding: 14px 15px;
   font-size: 16px;
+}
+
+.hide-inputs input {
+  opacity: 0;
 }
 
 #TeeTimeFormContainer {
@@ -3142,9 +3146,11 @@
 }
 
 .site-footer {
+  padding-top: 6px;
   margin-top: 98px;
   margin-bottom: 14px;
   color: rgba(255, 255, 255, 0.55);
+  border-top: double 1px rgba(255, 255, 255, 0.5);
 }
 
 .site-footer a {
@@ -3256,7 +3262,7 @@ body, html {
 
 .btn-gold {
   color: #f0f0f0;
-  background-image: linear-gradient(#ddc061, #d4af37) !important;
+  background-image: linear-gradient(#dab74c, #c9a22a) !important;
 }
 
 .button-push {
