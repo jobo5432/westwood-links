@@ -3049,6 +3049,78 @@
   clip: auto;
 }
 
+.banner {
+  color: #ffffff !important;
+  position: relative;
+  background-size: cover;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  border-bottom: solid 1px #f0f0f0;
+}
+
+.homepage-banner {
+  background: url(../static/bg-1920-flipped-short.jpg) repeat center center;
+  height: 400px;
+}
+
+.homepage-banner .branding {
+  border: none;
+  margin-right: 18px;
+  display: inline-block;
+  float: left;
+  margin-top: 164px;
+}
+
+.homepage-banner .branding h1, .homepage-banner .branding h2 {
+  border: none;
+  display: inline-block;
+  margin: 0;
+}
+
+.homepage-banner .branding h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 10rem !important;
+}
+
+.homepage-banner .branding h2 {
+  font-family: 'News Cycle', sans-serif;
+  margin-left: 22rem;
+  font-size: 4rem !important;
+  margin-top: -4rem;
+}
+
+.subpage-banner {
+  background: url(../static/b2-1920.jpg) repeat center center;
+  height: 150px;
+}
+
+.subpage-banner .branding {
+  border: none;
+  margin-right: 18px;
+  display: inline-block;
+  float: left;
+  margin-top: 0px;
+}
+
+.subpage-banner .branding h1, .subpage-banner .branding h2 {
+  border: none;
+  display: inline-block;
+  margin: 0;
+}
+
+.subpage-banner .branding h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 8rem !important;
+}
+
+.subpage-banner .branding h2 {
+  font-family: 'News Cycle', sans-serif;
+  margin-left: 30rem;
+  font-size: 3rem !important;
+  margin-top: -5.5rem !important;
+  float: left;
+}
+
 .main-nav {
   margin-top: -28px;
 }
@@ -3106,43 +3178,6 @@
 
 #TeeTimeFormContainer {
   border-left: solid 1px #4d4d4d;
-}
-
-.banner {
-  color: #ffffff !important;
-  position: relative;
-  background: url(../static/bg-1920-short.jpg) repeat center center;
-  background-size: cover;
-  border-radius: 0 !important;
-  margin: 0 !important;
-  border-bottom: solid 1px #f0f0f0;
-  height: 400px;
-}
-
-.banner h1, .banner h2 {
-  border: none;
-  display: inline-block;
-  margin: 0;
-}
-
-.banner h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 10rem !important;
-}
-
-.banner h2 {
-  font-family: 'News Cycle', sans-serif;
-  margin-left: 22rem;
-  font-size: 4rem !important;
-  margin-top: -4rem;
-}
-
-.banner .branding {
-  border: none;
-  margin-right: 18px;
-  display: inline-block;
-  float: right;
-  margin-top: 164px;
 }
 
 .site-footer {

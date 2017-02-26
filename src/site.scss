@@ -18,6 +18,7 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 //site styles
+@import "./components/common/Header.component";
 @import "./components/common/Navbar.component";
 @import "./components/common/MailingListForm.component";
 @import "./components/common/TeeTimeCallout.component";

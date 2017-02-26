@@ -1,0 +1,74 @@
+.banner {
+  color:           $banner-text !important;
+  position:        relative;
+
+  background-size: cover;
+
+  border-radius:   0 !important;
+  margin:          0 !important;
+  border-bottom:   solid 1px $main-text;
+}
+
+.homepage-banner {
+  background: url(../static/bg-1920-flipped-short.jpg) repeat center center;
+  height:     400px;
+
+  .branding {
+    border:       none;
+    margin-right: 18px;
+    display:      inline-block;
+    float:        left;
+    margin-top:   164px;
+
+    h1, h2 {
+      border:  none;
+      display: inline-block;
+      margin:  0;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size:   10rem !important;
+    }
+
+    h2 {
+      font-family: 'News Cycle', sans-serif;
+      margin-left: 22rem;
+      font-size:   4rem !important;
+      margin-top:  -4rem;
+    }
+  }
+}
+
+.subpage-banner {
+  background: url(../static/b2-1920.jpg) repeat center center;
+  height:     150px;
+
+  .branding {
+    border:       none;
+    margin-right: 18px;
+    display:      inline-block;
+    float:        left;
+    margin-top:   0px;
+
+    h1, h2 {
+      border:  none;
+      display: inline-block;
+      margin:  0;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size:   8rem !important;
+    }
+
+    h2 {
+      font-family: 'News Cycle', sans-serif;
+      margin-left: 30rem;
+      font-size:   3rem !important;
+      margin-top:  -5.5rem !important;
+      float: left;
+    }
+  }
+
+}

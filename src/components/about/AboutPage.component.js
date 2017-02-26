@@ -1,16 +1,18 @@
 import React from 'react';
+import Header from '../common/Header.component';
+import Navbar from '../common/Navbar.component';
 
-class AboutPage extends React.Component{
-    render(){
-        return(
-            <div>
-                <h1>About</h1>
-                <p>This is a react.js starter kit. You should be able to use this to spin up a new react.js app
-                    in short time.
-                </p>
-            </div>
-        );
-    }
+class AboutPage extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header/>
+        <div className="container">
+          <Navbar/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default AboutPage;

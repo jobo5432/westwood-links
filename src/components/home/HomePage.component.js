@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import Header from '../common/Header.component';
 import Navbar from '../common/Navbar.component';
 import MailingListForm from '../common/MailingListForm.component';
 import TeeTimeCallout from '../common/TeeTimeCallout.component';
@@ -30,14 +31,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <div className="jumbotron banner">
-          <div className="container">
-            <div className="branding">
-              <div className="row"><h1 className="shadow-text">Westwood</h1></div>
-              <div className="row"><h2 className="shadow-text">Golf Club</h2></div>
-            </div>
-          </div>
-        </div>
+        <Header homePage/>
         <div className="container">
           <Navbar homePage/>
         </div>
