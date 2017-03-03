@@ -3220,6 +3220,15 @@
   display: flex;
 }
 
+#content-container .inner .page-content {
+  padding-top: 48px;
+}
+
+#content-container .inner .page-content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.4rem;
+}
+
 #content-container .full-height {
   position: relative;
 }

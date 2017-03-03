@@ -8,6 +8,17 @@
 
   .inner {
     display: flex;
+
+    .page-content{
+      padding-top: 48px;
+
+      h1{
+        font-family: 'Great Vibes', cursive;
+        font-size: 4.4rem;
+      }
+
+    }
+
   }
 
   .full-height {

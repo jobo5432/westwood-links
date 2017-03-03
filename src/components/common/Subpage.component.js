@@ -22,10 +22,12 @@ class Subpage extends React.Component{
 
   render(){
     return (
-      <div id="content-container">
+      <div id="content-container" className="subpage-container">
         <div className="inner row">
           <div className="col-md-8 equalH">
-            {this.props.children}
+            <div className="page-content">
+              {this.props.children}
+            </div>
           </div>
           <div className="col-md-4 full-height callout-container">
             <div>
