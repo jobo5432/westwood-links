@@ -24,6 +24,11 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 @import "./components/common/ContactBanner.component";
 @import "./components/common/Subpage.component";
 
+//page-specific
+@import "./components/about/AboutPage.component";
+@import "./components/tee-off/TeeOffPage.component";
+@import "./components/contact/ContactPage.component";
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

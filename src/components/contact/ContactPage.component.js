@@ -4,20 +4,20 @@ import Navbar from '../common/Navbar.component';
 import Subpage from '../common/Subpage.component';
 import * as Constants from '../../constants';
 
-class AboutPage extends React.Component {
+class ContactPage extends React.Component {
 
   componentWillMount(){
-    document.title = `${Constants.PAGE_TITLE_PREFIX} About Us`;
+    document.title = `${Constants.PAGE_TITLE_PREFIX} Contact Us`;
   }
 
   render() {
     return (
-      <div id="about-page">
+      <div id="contact-page">
         <Header/>
         <div className="container">
           <Navbar/>
           <Subpage>
-            <h1>About Us</h1>
+            <h1>Contact Us</h1>
           </Subpage>
         </div>
       </div>
@@ -25,4 +25,4 @@ class AboutPage extends React.Component {
   }
 }
 
-export default AboutPage;
+export default ContactPage;

@@ -3230,6 +3230,18 @@
   padding-bottom: 40px;
 }
 
+#about-page {
+  color: inherit;
+}
+
+#tee-off-page {
+  color: inherit;
+}
+
+#contact-page {
+  color: inherit;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

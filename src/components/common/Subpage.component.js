@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import MailingListForm from '../common/MailingListForm.component';
 import TeeTimeCallout from '../common/TeeTimeCallout.component';
 
@@ -25,7 +25,7 @@ class Subpage extends React.Component{
       <div id="content-container">
         <div className="inner row">
           <div className="col-md-8 equalH">
-            Content here
+            {this.props.children}
           </div>
           <div className="col-md-4 full-height callout-container">
             <div>
@@ -40,5 +40,9 @@ class Subpage extends React.Component{
     );
   }
 }
+
+Subpage.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
 export default Subpage;
