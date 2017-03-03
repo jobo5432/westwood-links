@@ -22,6 +22,6 @@ const Header = (props) => {
 
 Header.propTypes = {
   homePage: PropTypes.bool
-}
+};
 
 export default Header;

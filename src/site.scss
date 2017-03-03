@@ -1,12 +1,9 @@
 //variables
 @import "variables";
-
 //mixins
 @import "mixins";
-
 //main color palette
 @import "./palette";
-
 //custom font(s)
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes|News+Cycle');
 
@@ -25,12 +22,24 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 @import "./components/home/Homepage.component";
 @import "./components/common/Footer.component";
 @import "./components/common/ContactBanner.component";
+@import "./components/common/Subpage.component";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+}
 
 body, html {
   margin:           0;
   padding:          0px;
   background-color: $main-bg !important;
   background-image: url(../static/argyle.png);
+}
+
+.equalHW {
+  flex: 1;
 }
 
 .shadow-text {
@@ -59,11 +68,11 @@ body, html {
   color: $main-text;
 }
 
-.text-align-right{
+.text-align-right {
   text-align: right;
 }
 
-.callout {
+.full-callout.callout {
   font-size: 1.65rem;
 
   h3 {
@@ -93,8 +102,39 @@ body, html {
   }
 }
 
+.mini-callout.callout {
+  margin-bottom: 48px;
+  font-size: 1.45rem;
+
+  h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size:   3.25rem;
+  }
+
+  h4 {
+    font-size: 2.0rem;
+  }
+
+  .callout-form {
+    margin-top: -24px;
+  }
+
+  .btn, input[type=text] {
+    font-size: 1.5rem;
+  }
+
+  input[type=text] {
+    @include placeholder {
+      font-style:  italic;
+      font-size:   1.5rem;
+      font-weight: 100;
+      color:       lighten($main-bg, 25%);
+    }
+  }
+}
+
 .btn-gold {
-  color:            $main-text;
+  color:            #ffffff !important;
   background-image: linear-gradient($gold-gradient-start, $gold-gradient-end) !important;
 }
 

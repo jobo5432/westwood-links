@@ -1,0 +1,23 @@
+@import "../../variables";
+
+#content-container {
+  background-color: $main-content-bg;
+  margin-top:       -45px;
+  padding-top:      26px;
+  min-height: 600px;
+
+  .inner {
+    display: flex;
+  }
+
+  .full-height {
+    position: relative;
+  }
+
+  .callout-container {
+    padding-top: 36px;
+    background-color: darken($main-bg, 10%);
+    padding-bottom: 40px;
+  }
+
+}

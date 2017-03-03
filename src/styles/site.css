@@ -3209,11 +3209,42 @@
   font-size: 2.4rem;
 }
 
+#content-container {
+  background-color: #f0f0f0;
+  margin-top: -45px;
+  padding-top: 26px;
+  min-height: 600px;
+}
+
+#content-container .inner {
+  display: flex;
+}
+
+#content-container .full-height {
+  position: relative;
+}
+
+#content-container .callout-container {
+  padding-top: 36px;
+  background-color: #080808;
+  padding-bottom: 40px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0px;
   background-color: #212121 !important;
   background-image: url(../static/argyle.png);
+}
+
+.equalHW {
+  flex: 1;
 }
 
 .shadow-text {
@@ -3246,57 +3277,107 @@ body, html {
   text-align: right;
 }
 
-.callout {
+.full-callout.callout {
   font-size: 1.65rem;
 }
 
-.callout h3 {
+.full-callout.callout h3 {
   font-family: 'Great Vibes', cursive;
   font-size: 4.4rem;
 }
 
-.callout h4 {
+.full-callout.callout h4 {
   font-size: 2.5rem;
 }
 
-.callout .callout-form {
+.full-callout.callout .callout-form {
   margin-top: 24px;
 }
 
-.callout .btn, .callout input[type=text] {
+.full-callout.callout .btn, .full-callout.callout input[type=text] {
   font-size: 2rem;
 }
 
-.callout input[type=text]::-webkit-input-placeholder {
+.full-callout.callout input[type=text]::-webkit-input-placeholder {
   font-style: italic;
   font-size: 1.75rem;
   font-weight: 100;
   color: #616161;
 }
 
-.callout input[type=text]:-moz-placeholder {
+.full-callout.callout input[type=text]:-moz-placeholder {
   font-style: italic;
   font-size: 1.75rem;
   font-weight: 100;
   color: #616161;
 }
 
-.callout input[type=text]::-moz-placeholder {
+.full-callout.callout input[type=text]::-moz-placeholder {
   font-style: italic;
   font-size: 1.75rem;
   font-weight: 100;
   color: #616161;
 }
 
-.callout input[type=text]:-ms-input-placeholder {
+.full-callout.callout input[type=text]:-ms-input-placeholder {
   font-style: italic;
   font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.mini-callout.callout {
+  margin-bottom: 48px;
+  font-size: 1.45rem;
+}
+
+.mini-callout.callout h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.25rem;
+}
+
+.mini-callout.callout h4 {
+  font-size: 2.0rem;
+}
+
+.mini-callout.callout .callout-form {
+  margin-top: -24px;
+}
+
+.mini-callout.callout .btn, .mini-callout.callout input[type=text] {
+  font-size: 1.5rem;
+}
+
+.mini-callout.callout input[type=text]::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.mini-callout.callout input[type=text]:-moz-placeholder {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.mini-callout.callout input[type=text]::-moz-placeholder {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+.mini-callout.callout input[type=text]:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 1.5rem;
   font-weight: 100;
   color: #616161;
 }
 
 .btn-gold {
-  color: #f0f0f0;
+  color: #ffffff !important;
   background-image: linear-gradient(#dab74c, #c9a22a) !important;
 }
 

@@ -37,10 +37,10 @@ class HomePage extends React.Component {
         </div>
         <div className="container">
           <div className="col-md-6 light-text">
-            <MailingListForm submitAction={this.joinMailingList}/>
+            <MailingListForm submitAction={this.joinMailingList} mode="full"/>
           </div>
           <div className="col-md-6 light-text" id="TeeTimeFormContainer">
-            <TeeTimeCallout submitAction={this.viewTeeTimes}/>
+            <TeeTimeCallout submitAction={this.viewTeeTimes} mode="full"/>
           </div>
         </div>
       </div>
