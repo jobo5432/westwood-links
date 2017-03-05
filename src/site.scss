@@ -14,6 +14,7 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 //bootstrap
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+
 //site styles
 @import "./components/common/Header.component";
 @import "./components/common/Navbar.component";
@@ -28,6 +29,7 @@ $fa-font-path: "../../node_modules/font-awesome/fonts";
 @import "./components/about/AboutPage.component";
 @import "./components/tee-off/TeeOffPage.component";
 @import "./components/contact/ContactPage.component";
+@import "./components/photo-gallery/PhotoGalleryPage.component";
 
 * {
   -webkit-box-sizing: border-box;
@@ -67,6 +69,14 @@ body, html {
 
 .center-text {
   text-align: center;
+}
+
+.left-text{
+  text-algin: left;
+}
+
+.right-text{
+  text-align: right;
 }
 
 .light-text {
@@ -145,4 +155,10 @@ body, html {
 
 .button-push {
   margin-top: 76px;
+}
+
+
+.debug{
+  border: solid 1px red !important;
+  background-color: gold;
 }

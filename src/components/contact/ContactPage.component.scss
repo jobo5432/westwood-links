@@ -1,3 +1,21 @@
 #contact-page{
   color: inherit;
+
+  input[type=text], textarea {
+    @include placeholder {
+      font-style:  italic;
+      font-size:   1.75rem;
+      font-weight: 100;
+      color:       lighten($main-bg, 25%);
+    }
+  }
+
+  .message-body{
+    height: 480px;
+  }
+
+  .form-container{
+    padding-bottom: 14px;
+  }
+
 }

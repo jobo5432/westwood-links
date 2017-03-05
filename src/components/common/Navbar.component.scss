@@ -1,6 +1,10 @@
 .main-nav {
   margin-top: -28px;
 
+  .nav>li>a{
+    padding: 0px 2px;
+  }
+
   .navbar .navbar-nav-justified {
     padding-left:  0;
     padding-right: 0;
@@ -9,7 +13,7 @@
     .nav-pills{
       li{
         font-family: 'Great Vibes', cursive;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         background-image: linear-gradient($nav-gradient-start, $nav-gradient-end);
         border-right: solid 1px lighten($main-bg, 60%);
 

@@ -21,6 +21,7 @@ const Navbar = (props) => {
             <ul className="nav nav-pills nav-justified">
               <li><IndexLink to="/" activeClassName={homeActiveClassName}>Home</IndexLink></li>
               <li><Link to="/about" activeClassName="active-link">About Us</Link></li>
+              <li><Link to="/photo-gallery" activeClassName="active-link">Photo Gallery</Link></li>
               <li><Link to="/tee-off" activeClassName="active-link">Tee Off!</Link></li>
               <li><a href="http://hstrial-westwoodgolfclub.intuitwebsites.com/" target="_blank">Banquets & Weddings</a>
               </li>

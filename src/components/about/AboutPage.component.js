@@ -17,6 +17,7 @@ class AboutPage extends React.Component {
         <div className="container">
           <Navbar/>
           <Subpage>
+            <div>
             <h1>About Us</h1>
 
             <h3>Who We Are</h3>
@@ -36,6 +37,7 @@ class AboutPage extends React.Component {
               of
               all your friends. From an elaborate sit-down dinner or elegant buffet, our chefs and staff are always
               courteous and professional with all your wants and needs. Call today!</p>
+            </div>
           </Subpage>
         </div>
       </div>

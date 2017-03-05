@@ -2,12 +2,12 @@ import React, {PropTypes} from 'react';
 import MailingListForm from '../common/MailingListForm.component';
 import TeeTimeCallout from '../common/TeeTimeCallout.component';
 
-class Subpage extends React.Component{
+class Subpage extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.joinMailingList = this.joinMailingList.bind(this);
-    this.viewTeeTimes = this.viewTeeTimes.bind(this);
+    this.viewTeeTimes    = this.viewTeeTimes.bind(this);
   }
 
   joinMailingList(e) {
@@ -15,12 +15,12 @@ class Subpage extends React.Component{
     alert('join mailing list not implemented yet...');
   }
 
-  viewTeeTimes(e){
+  viewTeeTimes(e) {
     e.preventDefault();
     alert('view tee times not implemented yet...');
   }
 
-  render(){
+  renderTwoColumn() {
     return (
       <div id="content-container" className="subpage-container">
         <div className="inner row">
@@ -41,10 +41,44 @@ class Subpage extends React.Component{
       </div>
     );
   }
+
+  renderStacked() {
+    return (
+      <div id="content-container" className="subpage-container no-bottom-margin">
+        <div className="inner">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-12 equalH">
+                <div className="page-content">
+                  {this.props.children}
+                </div>
+              </div>
+            </div>
+            <div className="row callout-container">
+              <div className="col-md-6">
+                <MailingListForm mode="full" submitAction={this.joinMailingList}/>
+              </div>
+              <div className="col-md-6">
+                <TeeTimeCallout mode="full" submitAction={this.viewTeeTimes}/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    if(this.props.pageType && this.props.pageType === 'stacked')
+      return this.renderStacked();
+
+    return this.renderTwoColumn();
+  }
 }
 
 Subpage.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.object.isRequired,
+  pageType: PropTypes.string
 };
 
 export default Subpage;

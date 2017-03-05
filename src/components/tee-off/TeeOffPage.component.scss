@@ -1,3 +1,35 @@
-#tee-off-page{
+#tee-off-page {
   color: inherit;
+
+  .no-bullet-list {
+    list-style-type: none;
+    padding-left:    8px;
+
+    li {
+      margin-left: 0;
+
+    }
+  }
+
+  .info-row {
+    padding:       14px 0px 9px 0px;
+    border-bottom: solid 1px lighten($main-bg, 67%);
+
+    &:first-of-type{
+      padding-top: 0px;
+    }
+  }
+
+
+  h3 {
+    margin-top: 0;
+  }
+
+  h4{
+    margin-top: 24px;
+  }
+
+  img {
+    width: 100%;
+  }
 }

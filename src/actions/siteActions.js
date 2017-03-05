@@ -1,4 +1,5 @@
 import * as siteActions from '../constants/actionTypes';
+import initialState from '../reducers/initialState';
 
 export function toggleLoader(action, value) {
   return {type: action, value};

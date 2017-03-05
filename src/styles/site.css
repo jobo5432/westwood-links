@@ -3125,6 +3125,10 @@
   margin-top: -28px;
 }
 
+.main-nav .nav > li > a {
+  padding: 0px 2px;
+}
+
 .main-nav .navbar .navbar-nav-justified {
   padding-left: 0;
   padding-right: 0;
@@ -3133,7 +3137,7 @@
 
 .main-nav .navbar .navbar-nav-justified .nav-pills li {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   background-image: linear-gradient(#fcfcfc, #afafaf);
   border-right: solid 1px #bababa;
 }
@@ -3216,6 +3220,10 @@
   min-height: 600px;
 }
 
+#content-container h1 {
+  margin-top: 0;
+}
+
 #content-container .inner {
   display: flex;
 }
@@ -3247,8 +3255,87 @@
   color: inherit;
 }
 
+#tee-off-page .no-bullet-list {
+  list-style-type: none;
+  padding-left: 8px;
+}
+
+#tee-off-page .no-bullet-list li {
+  margin-left: 0;
+}
+
+#tee-off-page .info-row {
+  padding: 14px 0px 9px 0px;
+  border-bottom: solid 1px #cccccc;
+}
+
+#tee-off-page .info-row:first-of-type {
+  padding-top: 0px;
+}
+
+#tee-off-page h3 {
+  margin-top: 0;
+}
+
+#tee-off-page h4 {
+  margin-top: 24px;
+}
+
+#tee-off-page img {
+  width: 100%;
+}
+
 #contact-page {
   color: inherit;
+}
+
+#contact-page input[type=text]::-webkit-input-placeholder, #contact-page textarea::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+#contact-page input[type=text]:-moz-placeholder, #contact-page textarea:-moz-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+#contact-page input[type=text]::-moz-placeholder, #contact-page textarea::-moz-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+#contact-page input[type=text]:-ms-input-placeholder, #contact-page textarea:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #616161;
+}
+
+#contact-page .message-body {
+  height: 480px;
+}
+
+#contact-page .form-container {
+  padding-bottom: 14px;
+}
+
+#photo-gallery-page {
+  color: inherit;
+}
+
+#photo-gallery-page .image-container {
+  margin-bottom: 48px;
+}
+
+#photo-gallery-page .image-container img {
+  width: 100%;
+  margin: 4px;
 }
 
 * {
@@ -3288,6 +3375,14 @@ body, html {
 
 .center-text {
   text-align: center;
+}
+
+.left-text {
+  text-algin: left;
+}
+
+.right-text {
+  text-align: right;
 }
 
 .light-text {
@@ -3404,4 +3499,9 @@ body, html {
 
 .button-push {
   margin-top: 76px;
+}
+
+.debug {
+  border: solid 1px red !important;
+  background-color: gold;
 }
