@@ -6,6 +6,7 @@ import AboutPage from './components/about/AboutPage.component';
 import TeeOffPage from './components/tee-off/TeeOffPage.component';
 import ContactPage from './components/contact/ContactPage.component';
 import PhotoGalleryPage from './components/photo-gallery/PhotoGalleryPage.component';
+import ThankYouPage from './components/thank-you/ThankYouPage.component';
 
 export default (
   <Route path="/" component={App}>
@@ -14,5 +15,6 @@ export default (
     <Route path="photo-gallery" component={PhotoGalleryPage}/>
     <Route path="tee-off" component={TeeOffPage}/>
     <Route path="contact-us" component={ContactPage}/>
+    <Route path="thank-you" component={ThankYouPage}/>
   </Route>
 );

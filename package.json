@@ -1,7 +1,7 @@
 {
-  "name": "metasquares",
-  "version": "1.0.0",
-  "description": "A reactjs/redux port of the once-popular internet game 'MetaSquares'.",
+  "name": "WestwoodLinks.com",
+  "version": "2.0.0",
+  "description": "A reactjs/redux port of the Westwood Links website.",
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",

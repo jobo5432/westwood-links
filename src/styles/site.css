@@ -3338,6 +3338,10 @@
   margin: 4px;
 }
 
+#thank-you-page {
+  color: inherit;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
