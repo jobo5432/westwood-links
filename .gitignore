@@ -2,3 +2,4 @@ src/styles/*.component.css
 node_modules/
 .editorconfig
 .idea/
+dist/
