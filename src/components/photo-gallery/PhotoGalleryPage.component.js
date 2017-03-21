@@ -1,4 +1,6 @@
-import React, {PropTypes} from 'react';
+/*eslint-disable react/jsx-no-bind*/
+
+ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as siteActions from '../../actions/siteActions';
@@ -57,7 +59,7 @@ class PhotoGalleryPage extends React.Component {
                   return (
                     <div className="col-md-2" key={i}>
                       <img src={img} onClick={() => {
-                        this.changeBigImage(i)
+                        this.changeBigImage(i);
                       }} className="thumbnail"/>
                     </div>
                   );

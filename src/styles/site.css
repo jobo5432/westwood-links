@@ -3318,11 +3318,23 @@
 }
 
 #contact-page .message-body {
-  height: 480px;
+  height: 180px;
 }
 
 #contact-page .form-container {
   padding-bottom: 14px;
+}
+
+#contact-page .address-container {
+  padding-bottom: 40px;
+}
+
+#contact-page .address-container h3 {
+  margin-top: 24px;
+}
+
+#contact-page .address-container iframe {
+  border: solid 1px #ccc;
 }
 
 #photo-gallery-page {

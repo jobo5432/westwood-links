@@ -96,14 +96,12 @@ class ContactPage extends React.Component {
     if (this.validateForm()) {
 
       axios.post('http://localhost:3333/contact-us-request', this.state.formData)
-       .then((resp) => {
-       console.log(resp);
-       })
-       .catch((err) => {
-       console.log(err);
-       });
-
-       browserHistory.push('/thank-you');
+        .then((resp) => {
+          browserHistory.push('/thank-you');
+        })
+        .catch((err) => {
+          throw err;
+        });
     }
   }
 
@@ -200,6 +198,28 @@ class ContactPage extends React.Component {
                   </button>
                 </div>
               </div>
+            </div>
+            <div className="address-container">
+              <h3>Club Address</h3>
+              <p>
+                Westwood Golf Club<br />
+                825 Commonwealth Ave.<br />
+                West Mifflin Pa. 15122
+              </p>
+
+              <h3>Phone Numbers</h3>
+              <p>
+                <strong>Tee Times</strong>&nbsp;&nbsp;(412) 462-9555 ext 1<br />
+                <strong>Banquets & Weddings</strong>&nbsp;&nbsp;(412) 462-9555 ext 2<br />
+              </p>
+
+              <h3>Map & Directions</h3>
+              <p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3039.4519913265694!2d-79.88248!3d40.376674!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834efa30a39901b%3A0xa3976fc038a59b3a!2sWestwood+Golf+Club!5e0!3m2!1sen!2sus!4v1425138619059"
+                  width="100%"
+                  height="450" frameBorder="0"/>
+              </p>
             </div>
           </Subpage>
         </div>

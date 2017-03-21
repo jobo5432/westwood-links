@@ -77,7 +77,7 @@ class Subpage extends React.Component {
 }
 
 Subpage.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: () => {return PropTypes.object.isRequired | PropTypes.array.isRequired;},
   pageType: PropTypes.string
 };
 
