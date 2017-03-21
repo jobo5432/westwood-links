@@ -13,10 +13,10 @@ class ContactPage extends React.Component {
 
     this.state = {
       formData      : {
-        name   : 'Jim Hoy',
-        email  : 'jim.hoy@gmail.com',
-        phone  : '(412) 980-3400',
-        message: 'Hi there!',
+        name   : '',
+        email  : '',
+        phone  : '',
+        message: '',
         signup : true
       },
       validationData: {
@@ -95,7 +95,7 @@ class ContactPage extends React.Component {
   submit() {
     if (this.validateForm()) {
 
-      /*axios.post('http://localhost:3333/contact-us-request', this.state)
+      axios.post('http://localhost:3333/contact-us-request', this.state.formData)
        .then((resp) => {
        console.log(resp);
        })
@@ -103,8 +103,7 @@ class ContactPage extends React.Component {
        console.log(err);
        });
 
-       browserHistory.push('/thank-you');*/
-      alert('You passed!');
+       browserHistory.push('/thank-you');
     }
   }
 
