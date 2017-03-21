@@ -5,7 +5,7 @@ import axios from 'axios';
 class MailingListForm extends React.Component {
   constructor(props, context) {
     super(props, context);
-    debugger;
+    
     this.state = {
       mode          : props.mode,
       formData      : {
