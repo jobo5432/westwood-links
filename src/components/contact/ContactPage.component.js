@@ -95,7 +95,7 @@ class ContactPage extends React.Component {
   submit() {
     if (this.validateForm()) {
 
-      axios.post('http://localhost:3333/contact-us-request', this.state.formData)
+      axios.post('http://52.168.78.0:3333/contact-us-request', this.state.formData)
         .then((resp) => {
           browserHistory.push('/thank-you');
         })
