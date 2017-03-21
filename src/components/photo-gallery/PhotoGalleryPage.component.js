@@ -27,7 +27,7 @@ class PhotoGalleryPage extends React.Component {
   }
 
   componentWillMount() {
-    document.title = `${Constants.PAGE_TITLE_PREFIX} About Us`;
+    document.title = `${Constants.PAGE_TITLE_PREFIX} Photo Gallery`;
   }
 
   changeBigImage(index) {

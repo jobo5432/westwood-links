@@ -1,25 +1,38 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
+import {browserHistory} from 'react-router';
 import {push} from 'react-router-redux';
 import Header from '../common/Header.component';
 import Navbar from '../common/Navbar.component';
 import Subpage from '../common/Subpage.component';
 import * as Constants from '../../constants';
+import axios from 'axios';
 
 class ContactPage extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      name           : '',
-      email          : '',
-      phoneNumber    : '',
-      message        : '',
-      joinMailingList: true
+      formData      : {
+        name   : 'Jim Hoy',
+        email  : 'jim.hoy@gmail.com',
+        phone  : '(412) 980-3400',
+        message: 'Hi there!',
+        signup : true
+      },
+      validationData: {
+        name   : null,
+        email  : null,
+        phone  : null,
+        message: null
+      }
     };
 
-    this.signUp       = this.signUp.bind(this);
-    this.validateForm = this.validateForm.bind(this);
+
+    this.submit            = this.submit.bind(this);
+    this.validateForm      = this.validateForm.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.getInputCss       = this.getInputCss.bind(this);
+    this.getLabelCss       = this.getLabelCss.bind(this);
   }
 
   componentWillMount() {
@@ -27,13 +40,80 @@ class ContactPage extends React.Component {
   }
 
   validateForm() {
-    return true;
+    let errorCount = 0;
+    let nameRegex  = /^[a-zA-Z-'. ]+$/;
+    let emailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+    //name validation
+    if (!this.state.formData.name || !nameRegex.test(this.state.formData.name)) {
+      this.setState({validationData: Object.assign(this.state.validationData, {name: 'Name is a required field'})});
+      errorCount++;
+    }
+    else {
+      this.setState({validationData: Object.assign(this.state.validationData, {name: null})});
+    }
+
+    //email validation
+    if (!this.state.formData.email || !emailRegex.test(this.state.formData.email)) {
+      this.setState({validationData: Object.assign(this.state.validationData, {email: 'Email is a required field'})});
+      errorCount++;
+    }
+    else {
+      this.setState({validationData: Object.assign(this.state.validationData, {email: null})});
+    }
+
+    //phone validation
+    if (!this.state.formData.phone || !phoneRegex.test(this.state.formData.phone)) {
+      this.setState({validationData: Object.assign(this.state.validationData, {phone: 'Phone is a required field'})});
+      errorCount++;
+    }
+    else {
+      this.setState({validationData: Object.assign(this.state.validationData, {phone: null})});
+    }
+
+    //message validation
+    if (!this.state.formData.message || !this.state.formData.message.trim().length > 10) {
+      this.setState({validationData: Object.assign(this.state.validationData, {message: 'Comments are required. '})});
+      errorCount++;
+    }
+    else {
+      this.setState({validationData: Object.assign(this.state.validationData, {message: null})});
+    }
+
+    return errorCount == 0;
   }
 
-  signUp() {
+  getInputCss(val) {
+    return val ? 'form-group form-group-lg has-error' : 'form-group form-group-lg';
+  }
+
+  getLabelCss(val) {
+    return val ? 'text-danger' : 'text-danger hidden';
+  }
+
+  submit() {
     if (this.validateForm()) {
-      browserHistory.push('/thank-you');
+
+      /*axios.post('http://localhost:3333/contact-us-request', this.state)
+       .then((resp) => {
+       console.log(resp);
+       })
+       .catch((err) => {
+       console.log(err);
+       });
+
+       browserHistory.push('/thank-you');*/
+      alert('You passed!');
     }
+  }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value  = target.type === 'checkbox' ? target.checked : target.value;
+    const name   = target.name;
+
+    this.setState({formData: Object.assign(this.state.formData, {[name]: value})});
   }
 
   render() {
@@ -60,33 +140,63 @@ class ContactPage extends React.Component {
                 Come and enjoy!
               </p>
 
+
               <div className="row form-container">
                 <div className="col-md-12">
-                  <div className="form-group form-group-lg">
-                    <label>Name</label>
-                    <input type="text" className="form-control" placeholder="Full name..."/>
+                  <div className={this.getInputCss(this.state.validationData.name)}>
+                    <label>Name<span className="text-danger">*</span> <span
+                      className={this.getLabelCss(this.state.validationData.name)}>{this.state.validationData.name}</span></label>
+                    <input type="text" className="form-control" placeholder="Full name..."
+                           name="name"
+                           value={this.state.formData.name}
+                           onChange={this.handleInputChange}
+                    />
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <div className="form-group form-group-lg">
-                    <label>Email</label>
-                    <input type="text" className="form-control" placeholder="Email address... (e.g. you@domain.com)"/>
+                  <div className={this.getInputCss(this.state.validationData.email)}>
+                    <label>Email<span className="text-danger">*</span> <span
+                      className={this.getLabelCss(this.state.validationData.email)}>{this.state.validationData.email}</span></label>
+                    <input type="text" className="form-control" placeholder="Email address... (e.g. you@domain.com)"
+                           name="email"
+                           value={this.state.formData.email}
+                           onChange={this.handleInputChange}
+                    />
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <div className="form-group form-group-lg">
-                    <label>Phone Number</label>
-                    <input type="text" className="form-control" placeholder="Phone number... (xxx) xxx-xxxx"/>
+                  <div className={this.getInputCss(this.state.validationData.phone)}>
+                    <label>Phone<span className="text-danger">*</span> <span
+                      className={this.getLabelCss(this.state.validationData.phone)}>{this.state.validationData.phone}</span></label>
+                    <input type="text" className="form-control" placeholder="Phone number... (xxx) xxx-xxxx"
+                           name="phone"
+                           value={this.state.formData.phone}
+                           onChange={this.handleInputChange}
+                    />
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <div className="form-group form-group-lg">
-                    <label>Your Message</label>
-                    <textarea className="form-control message-body" placeholder="Your comments, please..." />
+                  <div className={this.getInputCss(this.state.validationData.message)}>
+                    <label>Comments<span className="text-danger">*</span> <span
+                      className={this.getLabelCss(this.state.validationData.message)}>{this.state.validationData.message}</span></label>
+                    <textarea className="form-control message-body" placeholder="Your comments, please..."
+                              name="message"
+                              value={this.state.formData.message}
+                              onChange={this.handleInputChange}
+                    />
                   </div>
                 </div>
                 <div className="col-md-12">
-                  <button className="btn btn-lg btn-gold pull-right" onClick={this.signUp}>
+                  <label>
+                    <input type="checkbox"
+                           name="signup"
+                           checked={this.state.formData.signup}
+                           onChange={this.handleInputChange}
+                    /> Join our mailing list
+                  </label>
+                </div>
+                <div className="col-md-12">
+                  <button className="btn btn-lg btn-gold pull-right" onClick={this.submit}>
                     <i className="fa fa-envelope-open-o"/> Send
                   </button>
                 </div>
